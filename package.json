@@ -1,6 +1,6 @@
 {
   "name": "cypheir-mail-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -22,5 +22,22 @@
     "tailwindcss": "^3.4.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.3"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unnamed-lab/cypheir-mail-web.git"
+  },
+  "keywords": [
+    "cypheir",
+    "web",
+    "mailing"
+  ],
+  "author": "Anuoluwa S. Adebayo (Unnamed)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unnamed-lab/cypheir-mail-web/issues"
+  },
+  "homepage": "https://github.com/unnamed-lab/cypheir-mail-web#readme"
 }
