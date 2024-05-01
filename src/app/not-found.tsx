@@ -1,5 +1,5 @@
 import Link from "next/link";
-import notfound from "../assets/img/error.svg";
+import notfound from "@/assets/img/error.svg";
 import Image from "next/image";
 
 export default function NotFound() {
