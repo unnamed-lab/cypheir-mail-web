@@ -2,7 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import develop from "@/assets/img/develop.svg";
 import { Block } from "@/components/ui";
-import { Hero } from "@/pages/home";
+import { Hero } from "@/page/home";
 
 export default function Home() {
   return (
