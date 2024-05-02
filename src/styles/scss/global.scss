@@ -6,8 +6,12 @@
 @use "./components/forms";
 @use "./components/mixins";
 
-// Layout 
+// Layout
 
 @use "./layouts/error";
 @use "./layouts/footer";
 @use "./layouts/navbar";
+
+// Section
+
+@use "./sections/home";
