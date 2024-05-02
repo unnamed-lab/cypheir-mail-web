@@ -13,7 +13,7 @@ export default function Hero() {
           Making online messaging quick and seamless
           <span className="text-[#1ca7ec] font-extrabold">.</span>
         </h1>
-        <h2 className="font-[300] text-[15px] md:text-[13px] w-[100%] sm:w-[80%] mb-4 md:mb-6 pointer-events-none">
+        <h2 className="font-[300] text-[15px] md:text-[13px] w-[100%] sm:w-[80%] !mb-4 md:!mb-8 pointer-events-none">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
           illo laboriosam perferendis sequi culpa, sint reiciendis facilis quod.
         </h2>
