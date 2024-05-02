@@ -1,17 +1,23 @@
 @use "../custom" as *;
 
 .btn {
+  --transparent-bg: rgba($color: $white, $alpha: 0.9): 
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-radius: 18px;
-  padding: 6px 14px;
-  font-size: 16px;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
   color: $black;
   background-color: $g-100;
+  text-align: center;
+  transition: color 400ms ease, background-color 400ms ease, border-radius 300ms ease;
 
   &:hover {
     background-color: $g-300;
+    border-radius: 10px;
   }
 
   &:focus {
@@ -24,25 +30,37 @@
     color: $black;
   }
 
-  &.primary-btn {
+
+  &.primary {
     background-color: $cypheir-main;
     color: $white;
 
-    &:hover {
+    &:hover, &:focus {
       outline: 1px solid $cypheir-main;
-      background-color: transparent;
-      color: $white;
-    }
-
-    &:focus {
-      outline: 2px solid $cypheir-main;
-      background-color: transparent;
-      color: $white;
+      background-color: var(--transparent-bg) !important;
+      color: $cypheir-main;
     }
 
     &:active {
-      outline: 1px solid $cypheir-main;
-      background-color: $cypheir-sub;
+      outline: 1px solid $cypheir-sub;
+      background-color: $cypheir-main !important;
+      color: $white;
+    }
+  }
+
+  &.dark {
+    background-color: $dark;
+    color: white;
+
+     &:hover, &:focus {
+      outline: 1px solid $g-900;
+      background-color: white;
+      color: $g-900;
+    }
+
+    &:active {
+      outline: 1px solid $g-900;
+      background-color: $dark;
       color: $white;
     }
   }
@@ -54,9 +72,9 @@
     background-color: transparent;
 
     &.dark {
-    svg {
-      fill: $white;
-    }
+      svg {
+        fill: $white;
+      }
     }
 
     svg {
