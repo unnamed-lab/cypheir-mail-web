@@ -114,7 +114,7 @@ export default function RootLayout({
             sizes="any"
           />
         </Head>
-        <WebVitals />
+        {/* <WebVitals /> */}
         <Nav />
         {children}
         <Footer />

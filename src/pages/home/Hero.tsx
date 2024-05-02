@@ -23,8 +23,7 @@ export default function Hero() {
                  after:hidden after:content-[' '] after:absolute after:bottom-[-6px] after:right-[-6px] after:w-[120px] after:h-[40px] after:border-b after:border-e after:rounded-[2px] after:border-b-[#88d6fd] after:border-e-[#88d6fd] 
                 
                 transition-all ease-in duration-300 before:transition-all before:duration-300 before:delay-200 before:ease-in-out after:transition-all after:duration-300 after:delay-200 after:ease-in-out`}
-              type={"button"}
-              customStyles={{}}
+              type={"button"} 
             >
               Get Started
             </Button>
@@ -40,7 +39,7 @@ export default function Hero() {
           alt="Users interaction"
           width={700}
           height={600}
-          className=""
+          className="w-[100%]"
         />
       </div>
     </section>
