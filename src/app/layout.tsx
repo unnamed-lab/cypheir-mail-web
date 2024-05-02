@@ -3,7 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { WebVitals } from "./web-vitals";
 import "@/styles/css/global.css"; // Styling
-import { Footer } from "@/components/layout";
+import { Footer, Nav } from "@/components/layout";
 
 const webData = {
   title: "Cypheir Creative: An Open-Source Hub for Designers & Devs 🌐🎨💻",
@@ -114,7 +114,8 @@ export default function RootLayout({
             sizes="any"
           />
         </Head>
-        <WebVitals />
+        {/* <WebVitals /> */}
+        <Nav />
         {children}
         <Footer />
       </body>

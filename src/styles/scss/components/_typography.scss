@@ -18,16 +18,16 @@
     font-size: 13px;
     font-weight: 400;
   }
-  h1 {
-    font-size: var(--heading-font);
-    margin-block-start: var(--heading-space);
-    margin-block-end: var(--heading-space);
-  }
-  h2 {
-    font-size: calc(var(--heading-font) - 0.162em);
-    margin-block-start: calc(var(--heading-space) / 0.9);
-    margin-block-end: calc(var(--heading-space) / 0.9);
-  }
+  // h1 {
+  //   font-size: var(--heading-font);
+  //   margin-block-start: var(--heading-space);
+  //   margin-block-end: var(--heading-space);
+  // }
+  // h2 {
+  //   font-size: calc(var(--heading-font) - 0.162em);
+  //   margin-block-start: calc(var(--heading-space) / 0.9);
+  //   margin-block-end: calc(var(--heading-space) / 0.9);
+  // }
   h3 {
     font-size: calc(var(--heading-font) - (0.162em * 1.5));
     margin-block-start: calc(var(--heading-space) / 0.8);
