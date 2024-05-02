@@ -7,15 +7,13 @@ import users from "@/assets/img/using-devices.svg";
 
 export default function Hero() {
   return (
-    <section className="block sm:flex pt-[3rem] pb-[2rem] md:pt-[3.5rem] px-[8vw] sm:max-md:px-[5vw] lg:px-[10vw] gap-[1rem] hero_grad">
+    <section className="block sm:flex pt-[3rem] pb-[2rem] md:pb-[1rem]  md:pt-[3rem] px-[8vw] sm:max-md:px-[5vw] lg:px-[10vw] gap-[1rem] hero_grad">
       <div className="w-[100%] sm:w-[40dvw] mt-[2rem] gap-[3rem]">
-        <h1 className="font-[600] md:text-[3.15rem] text-[2.5rem] mb-4 pointer-events-none">
+        <h1 className="font-[600] md:text-[3.15rem] text-[2.5rem]  mb-4 md:mb-6 pointer-events-none">
           Making online messaging quick and seamless
-          <span className="text-[#1ca7ec] font-extrabold">
-            .
-          </span>
+          <span className="text-[#1ca7ec] font-extrabold">.</span>
         </h1>
-        <h2 className="font-[300] text-[13px] w-[100%] sm:w-[80%] mb-6 pointer-events-none">
+        <h2 className="font-[300] text-[13px] w-[100%] sm:w-[80%] mb-4 md:mb-6 pointer-events-none">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
           illo laboriosam perferendis sequi culpa, sint reiciendis facilis quod.
         </h2>

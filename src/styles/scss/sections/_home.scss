@@ -2,7 +2,7 @@
 @use "../components/mixins" as *;
 
 .hero_grad {
-  background-image: linear-gradient(190deg, $cypheir-main, .5%, $white);
+  background-image: linear-gradient(190deg, $cypheir-sub, .5%, $white);
 
   @include responsive(mobile) {
     background-image: linear-gradient(190deg, $cypheir-main, 3%, $white);
