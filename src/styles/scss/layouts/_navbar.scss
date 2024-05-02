@@ -12,10 +12,13 @@
   max-width: 100dvw;
   padding: 5px 3rem;
   width: -webkit-fill-available;
-  box-shadow: 0 0.01px 10px $g-100;
   background-color: rgba($color: $bg-color, $alpha: 0.25);
   backdrop-filter: blur(2px);
   color: $font-colour;
+
+  @include responsive(mobile) {
+    box-shadow: 0 0.01px 10px $g-100;
+  }
 
   .nav-brand {
     cursor: pointer;
@@ -63,6 +66,5 @@
     @include responsive(mobile) {
       display: none;
     }
-
   }
 }
