@@ -16,7 +16,7 @@ export default function Clients({
 }) {
   if (supporters)
     return (
-      <section className="flex flex-wrap content-center justify-center pt-[0.75rem] pb-[0.75rem] md:pt-[0.25rem] md:pb-[0.25rem] px-[8vw] sm:max-md:px-[5vw] min-h-[4rem] lg:px-[10vw] gap-[2rem] border-t-2 border-b-2">
+      <section className="flex flex-wrap content-center justify-center pt-[0.5rem] pb-[0.5rem] md:pt-[0.25rem] md:pb-[0.25rem] px-[8vw] sm:max-md:px-[5vw] min-h-[4rem] lg:px-[10vw] gap-[2rem] border-t-2 border-b-2">
         {supporters?.map((el, index) => {
           return (
             <Link
