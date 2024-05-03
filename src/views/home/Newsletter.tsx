@@ -6,7 +6,7 @@ import { Button } from "@/components/ui";
 export default function Newsletter() {
   return (
     <section className="flex flex-wrap content-center justify-center pt-[0.5rem] pb-[0.5rem] md:pt-[0.25rem] md:pb-[0.25rem] px-[8vw] sm:max-md:px-[5vw] min-h-[4rem] lg:px-[10vw]">
-      <div className="w-full mt-[1.5rem] mb-[1.5rem] md:mt-[3rem] md:mb-[3rem] px-[2rem] py-[1.33rem] md:py-[2rem] flex rounded-2xl border-slate-300 border gap-2 bg-gradient-to-r from-slate-100 to-zinc-50 flex-wrap md:flex-nowrap flex-col md:flex-row gap-6">
+      <div className="w-full mt-[1.5rem] mb-[1.5rem] md:mt-[3rem] md:mb-[3rem] px-[0.75rem] py-[1.33rem] md:py-[2rem] flex rounded-2xl border-slate-300 border gap-3 bg-gradient-to-r from-slate-100 to-zinc-50 flex-wrap md:flex-nowrap flex-col md:flex-row  ">
         <div className="w-full md:w-1/2 h-[30vh] md:h-full object-cover content-center">
           <h2 className="font-bold text-[1.33rem] md:text-[1.75rem]">
             Want product news and updates? Sign up for our newsletter.
@@ -18,13 +18,13 @@ export default function Newsletter() {
             <form
               action="/"
               method="post"
-              className="flex flex-wrap md:flex-nowrap w-auto gap-3"
+              className="flex flex-wrap lg:flex-nowrap w-auto gap-3"
             >
               <SingleTextBox
                 type="email"
                 name="newsletter"
                 placeholder="Enter your email"
-                className="grow"
+                className="grow w-full"
               />
               <Button
                 type="submit"
