@@ -1,4 +1,4 @@
-import { Clients, Hero, Stats } from "@/views/home";
+import { Clients, Hero, Newsletter, Stats } from "@/views/home";
 import logo from "@/assets/img/logo.svg";
 
 export default function Home() {
@@ -19,6 +19,7 @@ export default function Home() {
         <Hero />
         <Clients supporters={supporters} />
         <Stats data={stats} />
+        <Newsletter />
       </main>
     </>
   );
