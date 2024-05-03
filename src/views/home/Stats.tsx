@@ -2,6 +2,7 @@
 import Image from "next/image";
 import thumb from "@/assets/img/statsThumb.jpeg";
 import { StatCard } from "@/components/ui";
+import { useEffect, useState } from "react";
 
 interface IStats {
   request: number;
@@ -12,6 +13,22 @@ interface IStats {
 
 function Stats({ data }: { data: IStats }) {
   const { request, user, message, speed } = data;
+  const [usersInfo, setUsersInfo] = useState("variety");
+
+  useEffect(() => {
+    switch (true) {
+      case user >= 100000000:
+        return setUsersInfo("billions");
+      case user >= 1000000:
+        return setUsersInfo("millions");
+      case user >= 1000:
+        return setUsersInfo("thousands");
+      case user >= 100:
+        return setUsersInfo("thundreds");
+      default:
+        return setUsersInfo("variety");
+    }
+  }, [user])
 
   return (
     <section className="flex flex-wrap content-center justify-center pt-[0.5rem] pb-[0.5rem] md:pt-[0.25rem] md:pb-[0.25rem] px-[8vw] sm:max-md:px-[5vw] min-h-[4rem] lg:px-[10vw]">
@@ -32,7 +49,7 @@ function Stats({ data }: { data: IStats }) {
               Our track record.
             </h6>
             <h2 className="text-[1.75rem] md:text-[2rem] font-bold leading-7 md:leading-10 mb-11">
-              Trusted by thousands of creators worldwide.
+              Trusted by {usersInfo} of creators worldwide.
             </h2>
             <p className="text-[12px] md:text-[16px] mt-3 mb-10">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
