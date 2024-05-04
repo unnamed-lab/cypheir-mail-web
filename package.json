@@ -11,9 +11,13 @@
     "prettier": "npx prettier . --write && npx prettier . --check"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "beautiful": "^0.0.1",
+    "formik": "^2.4.6",
+    "husky": "^9.0.11",
     "icons": "^1.0.0",
     "next": "14.2.3",
+    "pretty-quick": "^4.0.0",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.3"
@@ -27,7 +31,6 @@
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwind": "^2.2.12",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "sass": "^1.76.0",
     "tailwind-merge": "^2.3.0",
@@ -54,6 +57,11 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }

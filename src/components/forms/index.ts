@@ -1,1 +1,1 @@
-export { default as SingleTextBox } from "./textBox";
+export { default as SingleTextBox } from './textBox';

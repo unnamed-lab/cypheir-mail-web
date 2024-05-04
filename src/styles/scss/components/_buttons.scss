@@ -1,4 +1,4 @@
-@use "../custom" as *;
+@use '../custom' as *;
 
 .btn {
   --transparent-bg: rgba($color: $white, $alpha: 0.9): cursor: pointer;

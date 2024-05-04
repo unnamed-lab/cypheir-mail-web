@@ -1,9 +1,9 @@
-"use client";
+'use client';
 export default function StatCard({
   data,
   text,
   countable = true,
-  unit = "",
+  unit = '',
 }: {
   data: number;
   text: string;
@@ -11,15 +11,15 @@ export default function StatCard({
   unit?: string;
 }) {
   return (
-    <div className="border-s-2 pl-4 hover:border-[#1ca7ec] cursor-pointer">
-      <h3 className="w-full font-bold text-[2.25rem] md:text-[2rem] tabular-nums">
-        {data ? data : 0}{" "}
+    <div className="cursor-pointer border-s-2 pl-4 hover:border-[#1ca7ec]">
+      <h3 className="w-full text-[2.25rem] font-bold tabular-nums md:text-[2rem]">
+        {data ? data : 0}{' '}
         <span className="text-[1rem] md:text-[1.25rem]">
-          {`${!countable && unit ? `${unit}${data > 1 ? "s" : ""}` : ""}`}
+          {`${!countable && unit ? `${unit}${data > 1 ? 's' : ''}` : ''}`}
         </span>
       </h3>
-      <p className="text-[12px] md:text-[14px] font-normal md:font-semibold">
-        {`${text}${data > 1 && countable ? "s" : ""}`}
+      <p className="text-[12px] font-normal md:text-[14px] md:font-semibold">
+        {`${text}${data > 1 && countable ? 's' : ''}`}
       </p>
     </div>
   );

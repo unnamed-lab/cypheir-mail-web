@@ -1,43 +1,43 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui";
-import users from "@/assets/img/using-devices.svg";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui';
+import users from '@/assets/img/using-devices.svg';
 
 export default function Hero() {
   return (
-    <section className="block sm:flex pt-[3rem] pb-[2rem] md:pb-[1rem]  md:pt-[3rem] px-[8vw] sm:max-md:px-[5vw] lg:px-[10vw] gap-[1rem] hero_grad">
-      <div className="w-[100%] sm:w-[40dvw] mt-[2rem] gap-[3rem]">
-        <h1 className="font-[600] md:text-[3.15rem] text-[2.85rem]  mb-4 md:mb-6 pointer-events-none">
+    <section className="hero_grad block gap-[1rem] px-[8vw] pb-[2rem]  pt-[3rem] sm:flex sm:max-md:px-[5vw] md:pb-[1rem] md:pt-[3rem] lg:px-[10vw]">
+      <div className="mt-[2rem] w-[100%] gap-[3rem] sm:w-[40dvw]">
+        <h1 className="pointer-events-none mb-4 text-[2.85rem]  font-[600] md:mb-6 md:text-[3.15rem]">
           Making online messaging quick and seamless
-          <span className="text-[#1ca7ec] font-extrabold">.</span>
+          <span className="font-extrabold text-[#1ca7ec]">.</span>
         </h1>
-        <h2 className="font-[300] text-[15px] md:text-[13px] w-[100%] sm:w-[80%] !mb-4 md:!mb-8 pointer-events-none">
+        <h2 className="pointer-events-none !mb-4 w-[100%] text-[15px] font-[300] sm:w-[80%] md:!mb-8 md:text-[13px]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
           illo laboriosam perferendis sequi culpa, sint reiciendis facilis quod.
         </h2>
-        <div className="flex mb-6 items-center flex-wrap gap-6">
-          <Link href={"/"}>
+        <div className="mb-6 flex flex-wrap items-center gap-6">
+          <Link href={'/'}>
             <Button
-              className={`relative w-[140px] md:w-[120px] h-[40px] border border-black !rounded-[4px] hover:text-white hover:bg-black hover:before:block hover:after:block 
+              className={`before:content-[' '] after:content-[' '] relative h-[40px] w-[140px] !rounded-[4px] border border-black transition-all 
 
-                before:hidden before:content-[' '] before:absolute before:top-[-6px] before:left-[-6px] before:w-[120px] before:h-[40px] before:border-t before:border-s before:rounded-[2px] before:border-t-[#1ca7ec] before:border-s-[#1ca7ec] 
+                duration-300 ease-in before:absolute before:left-[-6px] before:top-[-6px] before:hidden before:h-[40px] before:w-[120px] before:rounded-[2px] before:border-s before:border-t before:border-s-[#1ca7ec] before:border-t-[#1ca7ec] 
                 
-                 after:hidden after:content-[' '] after:absolute after:bottom-[-6px] after:right-[-6px] after:w-[120px] after:h-[40px] after:border-b after:border-e after:rounded-[2px] after:border-b-[#88d6fd] after:border-e-[#88d6fd] 
+                 before:transition-all before:delay-200 before:duration-300 before:ease-in-out after:absolute after:bottom-[-6px] after:right-[-6px] after:hidden after:h-[40px] after:w-[120px] after:rounded-[2px] after:border-b after:border-e 
                 
-                transition-all ease-in duration-300 before:transition-all before:duration-300 before:delay-200 before:ease-in-out after:transition-all after:duration-300 after:delay-200 after:ease-in-out`}
-              type={"button"}
+                after:border-b-[#88d6fd] after:border-e-[#88d6fd] after:transition-all after:delay-200 after:duration-300 after:ease-in-out hover:bg-black hover:text-white hover:before:block hover:after:block md:w-[120px]`}
+              type={'button'}
             >
               Get Started.
             </Button>
           </Link>
-          <span className="font-[600] text-[14.5px] md:text-[13px] text-slate-500  pointer-events-none  transition-all duration-300">
+          <span className="pointer-events-none text-[14.5px] font-[600] text-slate-500  transition-all  duration-300 md:text-[13px]">
             It is free!
           </span>
         </div>
       </div>
-      <div className="hidden md:flex w-[100%] sm:w-[60dvw] mt-[2rem]  sm:flex flex-wrap content-center justify-content-center">
+      <div className="justify-content-center mt-[2rem] hidden w-[100%] flex-wrap  content-center sm:flex sm:w-[60dvw] md:flex">
         <Image
           src={users}
           alt="Users interaction"

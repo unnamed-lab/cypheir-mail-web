@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { twMerge } from "tailwind-merge";
+import { twMerge } from 'tailwind-merge';
 
 export default function button({
   className,
-  type = "button",
+  type = 'button',
   children,
 }: {
   className?: string;
-  type?: "submit" | "reset" | "button";
+  type?: 'submit' | 'reset' | 'button';
   children: any;
 }) {
   return (

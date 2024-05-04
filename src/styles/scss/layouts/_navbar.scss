@@ -1,6 +1,6 @@
-@use "../custom" as *;
-@use "../components/mixins" as *;
-@use "../components/animation" as *;
+@use '../custom' as *;
+@use '../components/mixins' as *;
+@use '../components/animation' as *;
 
 .navbar {
   z-index: 999;

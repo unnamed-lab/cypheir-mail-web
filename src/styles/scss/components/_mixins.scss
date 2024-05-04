@@ -1,4 +1,4 @@
-@use "../custom" as *;
+@use '../custom' as *;
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == mobile {
@@ -28,9 +28,9 @@
 
 @mixin theme-icon($light-theme: true) {
   @if $light-theme {
-    background: url("../../assets/icons/day.svg");
+    background: url('../../assets/icons/day.svg');
   } @else {
-    background: url("../../assets/icons/cloudy.svg");
+    background: url('../../assets/icons/cloudy.svg');
   }
 }
 

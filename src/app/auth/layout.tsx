@@ -1,5 +1,5 @@
-import { AuthNav, Footer } from "@/components/layout";
-import React from "react";
+import { AuthNav, Footer } from '@/components/layout';
+import React from 'react';
 
 export default function AuthLayout({
   children,

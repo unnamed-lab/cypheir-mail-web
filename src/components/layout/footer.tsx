@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import xLogo from "../../assets/icons/x.svg";
-import gitHub from "../../assets/icons/github.svg";
-import globe from "../../assets/icons/globe.svg";
-import discord from "../../assets/icons/discord.svg";
-import Image from "next/image";
+import xLogo from '../../assets/icons/x.svg';
+import gitHub from '../../assets/icons/github.svg';
+import globe from '../../assets/icons/globe.svg';
+import discord from '../../assets/icons/discord.svg';
+import Image from 'next/image';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -13,7 +13,7 @@ function Footer() {
     <>
       <footer className={`footer`}>
         <div className="footer-credits">
-          Copyright &copy;{year} All rights reserved. Made by{" "}
+          Copyright &copy;{year} All rights reserved. Made by{' '}
           <span>Unnamed</span> and many others with love. 💙
         </div>
         <div className="footer-social">

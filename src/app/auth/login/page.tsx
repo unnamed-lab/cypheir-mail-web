@@ -1,12 +1,12 @@
-import Image from "next/image";
-import teamImg from "@/assets/img/video_meeting.svg";
-import { AuthForm } from "@/components/ui";
-import { SingleTextBox } from "@/components/forms";
+import Image from 'next/image';
+import teamImg from '@/assets/img/video_meeting.svg';
+import { AuthForm } from '@/components/ui';
+import { SingleTextBox } from '@/components/forms';
 
 export default function LogIn() {
-  const imageCaption = "Join the team.";
+  const imageCaption = 'Join the team.';
   return (
-    <main className="flex w-full h-auto relative">
+    <main className="relative flex h-auto w-full">
       <section className="w-full md:w-2/5">
         <AuthForm
           title="Log In"
@@ -15,20 +15,22 @@ export default function LogIn() {
           type="login"
         >
           <SingleTextBox
+            required={true}
             label="Username"
             name="username"
             placeholder="Enter Your Username"
           />
           <SingleTextBox
+            required={true}
             label="Password"
             name="password"
             placeholder="Enter Your Password"
           />
         </AuthForm>
       </section>
-      <section className="md:w-3/5 p-12 justify-center hidden md:flex items-center object-contain border-s">
+      <section className="hidden items-center justify-center border-s object-contain p-12 md:flex md:w-3/5">
         <Image
-          className="w-full h-auto"
+          className="h-auto w-full"
           src={teamImg}
           width={500}
           height={500}
