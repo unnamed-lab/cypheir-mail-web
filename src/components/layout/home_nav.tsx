@@ -1,32 +1,32 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "../ui";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '../ui';
 
 export default function Nav() {
   return (
     <nav className="navbar">
       <menu className="nav-menu">
         <li className="nav-menu--list">
-          <Link href={"/"}>Home</Link>
+          <Link href={'/'}>Home</Link>
         </li>
         <li className="nav-menu--list">
-          <Link href={"/"}>Product</Link>
+          <Link href={'/'}>Product</Link>
         </li>
         <li className="nav-menu--list">
-          <Link href={"/"}>Solution</Link>
+          <Link href={'/'}>Solution</Link>
         </li>
         <li className="nav-menu--list">
-          <Link href={"/"}>About</Link>
+          <Link href={'/'}>About</Link>
         </li>
       </menu>
 
       <div className="nav-brand">
-        <Link href={"/"}>
+        <Link href={'/'}>
           <Image
             className="nav-brand--logo"
-            src={"/logo.svg"}
+            src={'/logo.svg'}
             alt="brand logo"
             width={200}
             height={80}
@@ -36,7 +36,7 @@ export default function Nav() {
 
       <menu className="call-to-action--nav">
         <li>
-          <Link href={"/"}>
+          <Link href={'/auth/login'}>
             <Button className="dark w-[120px]" type="button">
               Log In
             </Button>
@@ -44,7 +44,7 @@ export default function Nav() {
         </li>
 
         <li>
-          <Link href={"/"}>
+          <Link href={'/auth/signup'}>
             <Button className="primary w-[80px]" type="button">
               Sign Up
             </Button>

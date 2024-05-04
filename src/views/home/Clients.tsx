@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface ISupport {
   name: string;
@@ -16,13 +16,13 @@ export default function Clients({
 }) {
   if (supporters)
     return (
-      <section className="flex flex-wrap content-center justify-center pt-[0.5rem] pb-[0.5rem] md:pt-[0.25rem] md:pb-[0.25rem] px-[8vw] sm:max-md:px-[5vw] min-h-[4rem] lg:px-[10vw] gap-[2rem] border-t-2 border-b-2">
+      <section className="flex min-h-[4rem] flex-wrap content-center justify-center gap-[2rem] border-b-2 border-t-2 px-[8vw] pb-[0.5rem] pt-[0.5rem] sm:max-md:px-[5vw] md:pb-[0.25rem] md:pt-[0.25rem] lg:px-[10vw]">
         {supporters?.map((el, index) => {
           return (
             <Link
               href={el.url}
               key={index}
-              className="flex flex-wrap justify-center sm:h-full w-1/2 sm:w-1/5 object-contain content-stretch grayscale"
+              className="flex w-1/2 flex-wrap content-stretch justify-center object-contain grayscale sm:h-full sm:w-1/5"
             >
               <Image
                 key={index}
@@ -31,7 +31,7 @@ export default function Clients({
                 title={el.name}
                 width={200}
                 height={60}
-                className="w-4/5 md:w-3/5 opacity-80"
+                className="w-4/5 opacity-80 md:w-3/5"
               />
             </Link>
           );

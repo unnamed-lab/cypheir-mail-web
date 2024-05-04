@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface BlockProps {
   image: string;
@@ -21,7 +21,7 @@ export default function Block(props: BlockProps) {
         <div className="error_item">
           <h1>{title}</h1>
           <p>{desc}</p>
-          {backLink ? <Link href="/">Return Home</Link> : ""}
+          {backLink ? <Link href="/">Return Home</Link> : ''}
         </div>
       </div>
     </div>

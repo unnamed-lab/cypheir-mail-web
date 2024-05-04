@@ -1,11 +1,11 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://www.cypheir.xyz",
+      url: 'https://www.cypheir.xyz',
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: 'yearly',
       priority: 1,
     },
     // {

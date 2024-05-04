@@ -1,6 +1,6 @@
-"use client";
+'use client';
 import { Block } from '@/components/ui';
-import errorImg from '@/assets/img/error.svg'
+import errorImg from '@/assets/img/error.svg';
 
 export default function GlobalError({
   error,

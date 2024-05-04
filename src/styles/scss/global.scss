@@ -1,17 +1,17 @@
-@use "./components/tailwind";
-@use "./components/root";
-@use "./components/typography";
-@use "./components/animation";
-@use "./components/buttons";
-@use "./components/forms";
-@use "./components/mixins";
+@use './components/tailwind';
+@use './components/root';
+@use './components/typography';
+@use './components/animation';
+@use './components/buttons';
+@use './components/forms';
+@use './components/mixins';
 
 // Layout
 
-@use "./layouts/error";
-@use "./layouts/footer";
-@use "./layouts/navbar";
+@use './layouts/error';
+@use './layouts/footer';
+@use './layouts/navbar';
 
 // Section
 
-@use "./sections/home";
+@use './sections/home';

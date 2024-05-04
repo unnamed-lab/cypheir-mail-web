@@ -1,5 +1,5 @@
-@use "../custom" as *;
-@use "../components/mixins" as *;
+@use '../custom' as *;
+@use '../components/mixins' as *;
 
 .footer {
   display: flex;
@@ -36,11 +36,11 @@
 
   @include responsive(mobile) {
     flex-direction: column;
-    
-  padding-top: .75rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: .5rem;
+
+    padding-top: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .footer-credits {
@@ -71,8 +71,8 @@
     }
 
     @include responsive(mobile) {
-      margin-top: .5rem;
-      margin-bottom: .5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
       margin-right: auto;
       .social-icon {
         margin: auto 9px;
@@ -80,8 +80,8 @@
         height: 16px;
 
         img {
-            width: 13px;
-            height: 13px;
+          width: 13px;
+          height: 13px;
         }
       }
     }
