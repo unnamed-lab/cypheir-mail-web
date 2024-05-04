@@ -6,5 +6,4 @@ export function WebVitals() {
   useReportWebVitals((metric) => {
     console.log(metric);
   });
-
 }

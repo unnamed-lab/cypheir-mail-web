@@ -7,9 +7,11 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  colors: {
-    primary: "#1ca7ec",
-    secondary: "#88d6fd",
+  theme: {
+    // colors: {
+    //   primary: "#1ca7ec",
+    //   secondary: "#88d6fd",
+    // },
   },
   plugins: [],
 };

@@ -36,7 +36,7 @@ export default function Nav() {
 
       <menu className="call-to-action--nav">
         <li>
-          <Link href={"/"}>
+          <Link href={"/auth/login"}>
             <Button className="dark w-[120px]" type="button">
               Log In
             </Button>
@@ -44,7 +44,7 @@ export default function Nav() {
         </li>
 
         <li>
-          <Link href={"/"}>
+          <Link href={"/auth/signup"}>
             <Button className="primary w-[80px]" type="button">
               Sign Up
             </Button>

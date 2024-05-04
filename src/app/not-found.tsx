@@ -7,7 +7,7 @@ export default function NotFound() {
     <div className="error">
       <div className="error_container">
         <div className="error_item">
-            <Image src={notfound} alt="Page not found." />
+          <Image src={notfound} alt="Page not found." />
         </div>
         <div className="error_item">
           <h2>Not Found</h2>

@@ -28,7 +28,7 @@ function Stats({ data }: { data: IStats }) {
       default:
         return setUsersInfo("variety");
     }
-  }, [user])
+  }, [user]);
 
   return (
     <section className="flex flex-wrap content-center justify-center pt-[0.5rem] pb-[0.5rem] md:pt-[0.25rem] md:pb-[0.25rem] px-[8vw] sm:max-md:px-[5vw] min-h-[4rem] lg:px-[10vw]">
