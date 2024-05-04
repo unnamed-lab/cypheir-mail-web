@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import Head from 'next/head';
 import { WebVitals } from './web-vitals';
 import '@/styles/css/global.css'; // Styling
 import { Footer } from '@/components/layout';
@@ -104,16 +102,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Head>
-          <link
-            rel="icon"
-            href={
-              'https://res.cloudinary.com/dbeh9dzsh/image/upload/v1713345413/cypheir_creative/static/favicon_mn9bzz.ico' ||
-              './favicon.ico'
-            }
-            sizes="any"
-          />
-        </Head>
         {/* <WebVitals /> */}
         {children}
         <Footer />
