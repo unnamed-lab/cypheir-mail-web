@@ -47,16 +47,16 @@ export default function AuthForm({
 
       <div className="text-center font-medium my-4">
         <p>
-          {!type === "login"
-            ? "Already have an account?"
+          {type === "login"
+            ?  "Don't have an account with us?"
             : type === "signup"
-              ? "Don't have an account with us?"
+              ? "Already have an account?"
               : ""}{" "}
           <Link
             className="font-semibold text-[#1ca7ec] hover:text-[#88d6fd] ms-2 transition-all delay-100 duration-500 ease-in-out"
             href={redirectURL}
           >
-            {!type === "login" ? "Log in" : type === "signup" ? "Sign up" : ""}
+            {type === "login" ?  "Sign up"  : type === "signup" ? "Log in" : ""}
           </Link>{" "}
         </p>
       </div>

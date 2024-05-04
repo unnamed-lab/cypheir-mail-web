@@ -12,6 +12,7 @@ export default function LogIn() {
           title="Log In"
           desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga corrupti exercitationem."
           redirectURL="/auth/signup"
+          type="login"
         >
           <SingleTextBox
             label="Username"
