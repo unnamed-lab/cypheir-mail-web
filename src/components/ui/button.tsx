@@ -13,14 +13,13 @@ export default function button({
   className?: string;
   type?: 'submit' | 'reset' | 'button';
   children: any;
-  submitted: boolean;
+  submitted?: boolean;
   processing?: string;
-  hasInput: object;
+  hasInput?: object;
 }) {
-  
   return (
     <button
-      disabled={submitted}
+      disabled={submitted || false}
       type={type}
       className={twMerge(
         `btn disabled:!bg-zinc-600 disabled:!text-zinc-200`,
