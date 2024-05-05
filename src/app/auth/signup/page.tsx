@@ -15,31 +15,31 @@ export default function SignUp() {
           type="signup"
         >
           <SingleTextBox
-            required={true}
+            type="text"
             label="Username"
             name="username"
             placeholder="Enter Your Username"
           />
           <SingleTextBox
-            required={true}
+            type="text"
             label="First Name"
             name="firstname"
             placeholder="Enter Your First Name"
           />
           <SingleTextBox
-            required={true}
+            type="text"
             label="Last Name"
             name="lastname"
             placeholder="Enter Your Last Name"
           />
           <SingleTextBox
-            required={true}
+            type="email"
             label="Email Address"
             name="email"
             placeholder="Enter Your Email"
           />
           <SingleTextBox
-            required={true}
+            type="password"
             label="Password"
             name="password"
             placeholder="Enter Your Password"

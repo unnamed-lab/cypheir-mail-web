@@ -1,6 +1,17 @@
 'use client';
 import Link from 'next/link';
+import { useFormik } from 'formik';
 import { Button, CheckBox } from '.';
+import * as Yup from 'yup';
+import { loginSchema, signUpSchema } from '@/utils/validate';
+
+const SignupSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2, 'Too Short!')
+    .max(70, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+});
 
 export default function AuthForm({
   title,
@@ -15,6 +26,46 @@ export default function AuthForm({
   redirectURL: string;
   children: any;
 }) {
+  // console.log(children);
+  interface ILogIn {
+    username: string;
+    pasword: string;
+  }
+
+  interface IRegister {
+    username: string;
+    firstname: string;
+    lastname: string;
+    email: string;
+    password: string;
+  }
+
+  const LogInInitial: ILogIn = {
+    username: '',
+    pasword: '',
+  };
+
+  const RegisterInitial: IRegister = {
+    username: '',
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+  };
+
+  const initialFormValue: ILogIn | IRegister =
+    type === 'login' ? LogInInitial : RegisterInitial;
+
+  const validationSchemaScript = type === 'login' ? loginSchema : signUpSchema;
+
+  const formik = useFormik({
+    initialValues: { initialFormValue },
+    validationSchema: validationSchemaScript,
+    onSubmit: (values) => {
+      console.log({ values });
+    },
+  });
+
   return (
     <section className="mx-3 my-6 flex flex-1 flex-col flex-wrap justify-center md:mx-14 md:my-10">
       <h1 className="mb-3 text-center text-3xl font-semibold">{title}</h1>
@@ -23,12 +74,13 @@ export default function AuthForm({
       </h3>
 
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
+        onSubmit={formik.handleSubmit}
         className="mx-auto my-5 flex w-5/6 flex-col flex-wrap justify-center gap-4"
       >
-        {children}
+        {children?.map((el: any) => {
+          el.props.formik = formik;
+          return el;
+        })}
 
         {type === 'login' && (
           <div className="mx-auto my-2 flex w-full items-center gap-2 text-xs">

@@ -24,7 +24,7 @@ export default function Newsletter() {
                 type="email"
                 name="newsletter"
                 placeholder="Enter your email"
-                className="w-full grow"
+                className="w-full flex-1"
               />
               <Button
                 type="submit"
