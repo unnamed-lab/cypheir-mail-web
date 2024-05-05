@@ -1,4 +1,6 @@
 'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button, CheckBox } from '.';
 
@@ -15,6 +17,32 @@ export default function AuthForm({
   redirectURL: string;
   children: any;
 }) {
+  // console.log(children);
+  interface ILogIn {
+    username: string;
+    pasword: string;
+  }
+
+  interface IRegister {
+    username: string;
+    firstname: string;
+    lastname: string;
+    email: string;
+    password: string;
+  }
+
+  const [submitting, setSubmitting] = useState(false);
+  const [formInput, setFormInput] = useState({});
+
+  useEffect(() => {
+    console.log(formInput);
+  }, [formInput]);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setSubmitting(true);
+  };
+
   return (
     <section className="mx-3 my-6 flex flex-1 flex-col flex-wrap justify-center md:mx-14 md:my-10">
       <h1 className="mb-3 text-center text-3xl font-semibold">{title}</h1>
@@ -23,12 +51,14 @@ export default function AuthForm({
       </h3>
 
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
+        onSubmit={handleSubmit}
         className="mx-auto my-5 flex w-5/6 flex-col flex-wrap justify-center gap-4"
       >
-        {children}
+        {children?.map((el: any) => {
+          el.props.setInput = setFormInput;
+          el.props.value = formInput;
+          return el;
+        })}
 
         {type === 'login' && (
           <div className="mx-auto my-2 flex w-full items-center gap-2 text-xs">
@@ -41,6 +71,15 @@ export default function AuthForm({
         )}
 
         <Button
+          processing={
+            type === 'login'
+              ? 'Logging In'
+              : type === 'signup'
+                ? 'Registering'
+                : 'Submitting'
+          }
+          submitted={submitting}
+          hasInput={formInput}
           type="submit"
           className=" !rounded-lg !bg-zinc-300 !text-zinc-800 transition-colors duration-500 ease-in-out hover:!bg-[#1ca7ec] hover:!text-white"
         >

@@ -8,10 +8,12 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    // colors: {
-    //   primary: "#1ca7ec",
-    //   secondary: "#88d6fd",
-    // },
+    extend: {
+      colors: {
+        primary: '#1ca7ec',
+        secondary: '#88d6fd',
+      },
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 };

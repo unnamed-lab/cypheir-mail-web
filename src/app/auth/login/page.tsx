@@ -15,13 +15,13 @@ export default function LogIn() {
           type="login"
         >
           <SingleTextBox
-            required={true}
+            type="text"
             label="Username"
             name="username"
             placeholder="Enter Your Username"
           />
           <SingleTextBox
-            required={true}
+            type="password"
             label="Password"
             name="password"
             placeholder="Enter Your Password"
