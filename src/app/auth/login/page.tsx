@@ -18,8 +18,7 @@ export default function LogIn() {
             type="text"
             label="Username"
             name="username"
-            placeholder="Enter Your Username"
-          />
+            placeholder="Enter Your Username"         />
           <SingleTextBox
             type="password"
             label="Password"

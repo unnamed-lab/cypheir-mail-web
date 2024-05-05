@@ -1,17 +1,8 @@
 'use client';
-import Link from 'next/link';
-import { useFormik } from 'formik';
-import { Button, CheckBox } from '.';
-import * as Yup from 'yup';
-import { loginSchema, signUpSchema } from '@/utils/validate';
 
-const SignupSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(70, 'Too Long!')
-    .required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
-});
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Button, CheckBox } from '.';
 
 export default function AuthForm({
   title,
@@ -40,31 +31,17 @@ export default function AuthForm({
     password: string;
   }
 
-  const LogInInitial: ILogIn = {
-    username: '',
-    pasword: '',
+  const [submitting, setSubmitting] = useState(false);
+  const [formInput, setFormInput] = useState({});
+
+  useEffect(() => {
+    console.log(formInput);
+  }, [formInput]);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setSubmitting(true);
   };
-
-  const RegisterInitial: IRegister = {
-    username: '',
-    firstname: '',
-    lastname: '',
-    email: '',
-    password: '',
-  };
-
-  const initialFormValue: ILogIn | IRegister =
-    type === 'login' ? LogInInitial : RegisterInitial;
-
-  const validationSchemaScript = type === 'login' ? loginSchema : signUpSchema;
-
-  const formik = useFormik({
-    initialValues: { initialFormValue },
-    validationSchema: validationSchemaScript,
-    onSubmit: (values) => {
-      console.log({ values });
-    },
-  });
 
   return (
     <section className="mx-3 my-6 flex flex-1 flex-col flex-wrap justify-center md:mx-14 md:my-10">
@@ -74,11 +51,12 @@ export default function AuthForm({
       </h3>
 
       <form
-        onSubmit={formik.handleSubmit}
+        onSubmit={handleSubmit}
         className="mx-auto my-5 flex w-5/6 flex-col flex-wrap justify-center gap-4"
       >
         {children?.map((el: any) => {
-          el.props.formik = formik;
+          el.props.setInput = setFormInput;
+          el.props.value = formInput;
           return el;
         })}
 
@@ -93,6 +71,15 @@ export default function AuthForm({
         )}
 
         <Button
+          processing={
+            type === 'login'
+              ? 'Logging In'
+              : type === 'signup'
+                ? 'Registering'
+                : 'Submitting'
+          }
+          submitted={submitting}
+          hasInput={formInput}
           type="submit"
           className=" !rounded-lg !bg-zinc-300 !text-zinc-800 transition-colors duration-500 ease-in-out hover:!bg-[#1ca7ec] hover:!text-white"
         >
