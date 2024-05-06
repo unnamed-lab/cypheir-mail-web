@@ -12,7 +12,7 @@ import {
 
 export default function DashboardNav() {
   const router = useRouter;
-  console.log(router);
+  // console.log(router);
 
   const siderBarMenu = [
     { title: 'Keys', url: '', icon: <FaKey color="black" /> },
@@ -22,7 +22,7 @@ export default function DashboardNav() {
     { title: 'Analytics', url: '', icon: <FaChartLine color="black" /> },
   ];
   return (
-    <aside className="relative flex min-h-screen w-[13%] flex-col items-center gap-5 bg-zinc-800 px-2 py-3 md:w-[5%]">
+    <aside className="relative flex min-h-screen w-[15%] flex-col items-center gap-5 bg-zinc-800 px-2 py-3 md:w-[9%] lg:w-[5%]">
       <UserIcon name={'Adebayo Anuoluwa'} img={''} />
 
       {siderBarMenu?.map((el: any, index) => {
@@ -32,6 +32,7 @@ export default function DashboardNav() {
       })}
 
       <SideBtn
+        key={6}
         url={'/logout'}
         title={'Log out'}
         icon={<FaDoorOpen />}
