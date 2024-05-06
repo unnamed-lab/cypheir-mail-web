@@ -11,7 +11,7 @@ export default function SideBtn({
   className,
   containerClass,
 }: {
-  key?: number | string;
+  key: number | string;
   icon: any;
   title: string;
   url: string;
