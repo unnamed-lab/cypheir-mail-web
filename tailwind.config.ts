@@ -8,10 +8,10 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    fontFamily: {
-      poppins: ['Poppins', 'sans-serif'],
-    },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
       colors: {
         primary: '#1ca7ec',
         secondary: '#88d6fd',
