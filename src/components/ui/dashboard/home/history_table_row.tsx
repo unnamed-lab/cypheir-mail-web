@@ -21,7 +21,7 @@ export default function HistoryTableRow({ data }: { data: ITableData }) {
           rowData.push(link);
           break;
         default:
-          rowData.push(data[i]);
+          rowData.push(data[i as keyof typeof data]);
           break;
       }
     }

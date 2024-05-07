@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui';
+import { Button } from '@/components/forms';
 import users from '@/assets/img/using-devices.svg';
 
 export default function Hero() {
