@@ -33,11 +33,11 @@ export default function KeyBox({
   };
 
   return (
-    <div className="w-fill flex flex-wrap gap-1 md:w-10/12 md:flex-nowrap">
+    <div className="flex w-full flex-wrap gap-1 md:w-10/12 md:flex-nowrap">
       <input
         disabled
         className={twMerge(
-          'form-input-text w-fit flex-1 flex-shrink grow text-xs tracking-widest text-zinc-600 md:w-9/12 md:flex-none md:grow-0',
+          'form-input-text w-fit flex-grow text-xs tracking-widest text-zinc-600 md:w-9/12 md:flex-none md:grow-0',
           className
         )}
         type={(showText && 'text') || inputType}

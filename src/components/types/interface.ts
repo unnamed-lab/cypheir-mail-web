@@ -1,3 +1,4 @@
+import React from 'react';
 import { TKeyBoxType } from './types';
 
 export interface ITableData {
@@ -105,4 +106,8 @@ export interface IKeyContainer {
   type: TKeyBoxType;
   name: string;
   inputClass?: string;
+}
+
+export interface IHighlightCodeProps {
+  children: React.ReactNode | React.ReactNode[];
 }

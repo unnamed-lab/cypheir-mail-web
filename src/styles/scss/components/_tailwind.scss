@@ -10,4 +10,40 @@
   .form-key-btn {
     @apply mx-1 flex h-10 w-10 grow-0 cursor-pointer items-center justify-center rounded-md border-2 border-zinc-300 bg-zinc-100 p-2 transition-all duration-500 ease-in-out hover:bg-zinc-200;
   }
+
+  .documentation-container {
+    @apply h-auto max-h-[40dvh] w-full overflow-y-scroll p-3 text-sm;
+
+    h1 {
+      @apply text-2xl font-extrabold;
+    }
+
+    h2 {
+      @apply text-xl font-bold;
+    }
+
+    h3 {
+      @apply text-lg font-bold;
+    }
+
+    h4 {
+      @apply text-base font-semibold;
+    }
+
+    h5 {
+      @apply text-sm font-semibold;
+    }
+
+    h6 {
+      @apply text-xs font-semibold;
+    }
+
+    code {
+      @apply flex flex-wrap w-full text-sm rounded bg-zinc-200 p-3 font-mono;
+    }
+
+    img {
+      @apply w-full h-auto border-b border-b-4 border-b-secondary;
+    }
+  }
 }
