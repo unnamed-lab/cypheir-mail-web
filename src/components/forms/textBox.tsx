@@ -63,7 +63,7 @@ export default function SingleTextBox({
           setisInputValid(input !== '');
         }}
         className={twMerge(
-          ' h-[40px] rounded-[4px] bg-zinc-50 py-3 pl-2 pr-2 text-sm outline outline-1 outline-slate-300 transition-colors duration-500 ease-in-out invalid:bg-red-100 invalid:outline-red-600 invalid:placeholder:text-red-500 focus-within:outline-[#1ca7ec] focus:outline-none focus:outline-[#1ca7ec] active:outline-[#1ca7ec]',
+          'form-input-text',
           `${className} ${type === 'password' ? 'pr-7' : ''}`
         )}
       />
