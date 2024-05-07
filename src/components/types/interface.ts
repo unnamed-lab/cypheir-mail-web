@@ -1,3 +1,5 @@
+import { TKeyBoxType } from './types';
+
 export interface ITableData {
   id: string | number;
   type: string;
@@ -95,4 +97,12 @@ interface ILogDoughnutChart {
 export interface IDailyLogChart {
   className?: string;
   data: ILogDoughnutChart;
+}
+
+export interface IKeyContainer {
+  title: string;
+  actionKey: string | number;
+  type: TKeyBoxType;
+  name: string;
+  inputClass?: string;
 }

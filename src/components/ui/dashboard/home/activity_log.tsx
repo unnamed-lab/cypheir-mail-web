@@ -44,7 +44,7 @@ export default function ActivityLog({ data }: { data: Array<IActivityData> }) {
 
       <Line
         style={{}}
-        className="!font-poppins mx-auto max-h-[60vh] !w-full max-w-full px-5 md:!w-[90%]"
+        className="mx-auto max-h-[60vh] !w-full max-w-full px-5 !font-poppins md:!w-[90%]"
         options={{ responsive: true }}
         data={{
           labels,

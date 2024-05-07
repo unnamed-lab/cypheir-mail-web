@@ -12,7 +12,7 @@ import {
 export default function DashboardNav() {
   const siderBarMenu = [
     { title: 'Keys', url: '', icon: <FaKey color="black" /> },
-    { title: 'OTP', url: '', icon: <FaCode color="black" /> },
+    { title: 'OTP', url: 'dashboard/passcode', icon: <FaCode color="black" /> },
     { title: 'Mailing', url: '', icon: <FaEnvelope color="black" /> },
     { title: 'Automated Requests', url: '', icon: <FaRobot color="black" /> },
     { title: 'Analytics', url: '', icon: <FaChartLine color="black" /> },
