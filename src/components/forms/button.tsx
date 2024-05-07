@@ -1,6 +1,7 @@
 'use client';
 
 import { twMerge } from 'tailwind-merge';
+import { IButton } from '../types/interface';
 
 export default function button({
   className,
@@ -9,14 +10,7 @@ export default function button({
   submitted,
   processing = 'Submitting',
   hasInput,
-}: {
-  className?: string;
-  type?: 'submit' | 'reset' | 'button';
-  children: any;
-  submitted?: boolean;
-  processing?: string;
-  hasInput?: object;
-}) {
+}: IButton) {
   return (
     <button
       disabled={submitted || false}

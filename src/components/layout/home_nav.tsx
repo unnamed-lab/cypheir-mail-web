@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '../ui';
+import { Button } from '../forms';
 
 export default function Nav() {
   return (

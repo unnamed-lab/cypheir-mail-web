@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { SingleTextBox } from '@/components/forms';
-import { Button } from '@/components/ui';
+import { SingleTextBox, Button } from '@/components/forms';
 
 export default function Newsletter() {
   const [formInput, setFormInput] = useState({});
@@ -22,7 +21,7 @@ export default function Newsletter() {
               e.preventDefault();
             }}
             method="post"
-            className="flex h-full w-auto w-full flex-wrap items-center justify-end gap-3 lg:flex-nowrap"
+            className="flex h-full w-full flex-wrap items-center justify-end gap-3 md:w-auto lg:flex-nowrap"
           >
             <SingleTextBox
               value={formInput}

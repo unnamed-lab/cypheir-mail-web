@@ -1,12 +1,7 @@
 import { twMerge } from 'tailwind-merge';
+import { IToolTip } from '../types/interface';
 
-export default function ToolTip({
-  info,
-  className,
-}: {
-  info: string;
-  className?: string;
-}) {
+export default function ToolTip({ info, className }: IToolTip) {
   return (
     <div
       className={twMerge(

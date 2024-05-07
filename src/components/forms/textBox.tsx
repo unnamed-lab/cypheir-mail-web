@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import button from '../ui/button';
+import button from './button';
 
 export default function SingleTextBox({
   required = false,

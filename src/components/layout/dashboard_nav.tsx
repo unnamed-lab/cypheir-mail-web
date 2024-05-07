@@ -1,5 +1,4 @@
 'use client';
-import { useRouter } from 'next/router';
 import { SideBtn, UserIcon } from '../ui/dashboard';
 import {
   FaKey,
@@ -11,9 +10,6 @@ import {
 } from 'react-icons/fa';
 
 export default function DashboardNav() {
-  const router = useRouter;
-  // console.log(router);
-
   const siderBarMenu = [
     { title: 'Keys', url: '', icon: <FaKey color="black" /> },
     { title: 'OTP', url: '', icon: <FaCode color="black" /> },

@@ -2,22 +2,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ToolTip from '../tooltip';
+import { IUserIcon } from '@/components/types/interface';
 
-export default function UserIcon({
-  name,
-  img,
-  url = 'dashboard',
-}: {
-  name: string;
-  img: string;
-  url?: string;
-}) {
+export default function UserIcon({ name, img, url = 'dashboard' }: IUserIcon) {
   const nameArr = name.split(' ');
   const initials = nameArr[0][0].toUpperCase() + nameArr[1][0].toUpperCase();
 
   return (
     <div className="relative flex flex-col">
-      <div className=" shadow-xs basis peer relative mx-auto mb-2 flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-zinc-900 bg-secondary object-cover shadow-zinc-500 transition-all duration-700 ease-in-out hover:rounded-xl hover:bg-primary md:h-12 md:w-12">
+      <div className=" shadow-xs basis peer relative mx-auto mb-2 flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-zinc-900 bg-secondary object-cover shadow-zinc-500 transition-all duration-700 ease-in-out hover:rounded-xl hover:bg-primary md:h-11 md:w-11">
         <Link href={url}>
           {img ? (
             <Image

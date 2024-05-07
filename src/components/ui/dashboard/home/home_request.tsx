@@ -1,7 +1,6 @@
 import RequestItem from './request_item';
 
 export default function HomeRequest({ data }: { data: any }) {
-  console.log(data);
   return (
     <section className={`mb-2 grid grid-cols-3 gap-4 p-3 md:gap-14`}>
       {data?.map((item: any, index: number) => {

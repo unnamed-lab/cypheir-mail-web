@@ -1,4 +1,5 @@
 'use client';
+import { IActivityData } from '@/components/types/interface';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -21,11 +22,6 @@ ChartJS.register(
   Legend
 );
 
-interface IActivityData {
-  title: string;
-  data: number[];
-}
-
 export default function ActivityLog({ data }: { data: Array<IActivityData> }) {
   const labels = [
     'January',
@@ -43,8 +39,8 @@ export default function ActivityLog({ data }: { data: Array<IActivityData> }) {
   ];
 
   return (
-    <section className="p-3">
-      <h2 className="text-lg font-bold md:text-2xl">Activity Log.</h2>
+    <section className="mb-5 p-3">
+      <h2 className="w-full text-lg font-bold md:text-2xl">Activity Log.</h2>
 
       <Line
         style={{}}
@@ -54,16 +50,16 @@ export default function ActivityLog({ data }: { data: Array<IActivityData> }) {
           labels,
           datasets: [
             {
-              label: data[0].title,
+              label: data[0].title.toUpperCase(),
               data: [122, 1231, 112, 1312, 444],
-              borderColor: 'rgb(255, 99, 132)',
-              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: '#e62c2c',
+              backgroundColor: '#e62c2c88',
             },
             {
-              label: data[1].title,
+              label: data[1].title.toUpperCase(),
               data: [322, 131, 912, 2312, 5544],
-              borderColor: 'rgb(53, 162, 235)',
-              backgroundColor: 'rgba(53, 162, 235, 0.5)',
+              borderColor: '#1ca7ec',
+              backgroundColor: '#1ca7ec88',
             },
           ],
         }}

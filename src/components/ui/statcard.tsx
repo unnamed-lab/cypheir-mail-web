@@ -1,15 +1,13 @@
 'use client';
+
+import { IStatCard } from '../types/interface';
+
 export default function StatCard({
   data,
   text,
   countable = true,
   unit = '',
-}: {
-  data: number;
-  text: string;
-  countable?: boolean;
-  unit?: string;
-}) {
+}: IStatCard) {
   return (
     <div className="cursor-pointer border-s-2 pl-4 hover:border-[#1ca7ec]">
       <h3 className="w-full text-[2.25rem] font-bold tabular-nums md:text-[2rem]">
