@@ -85,3 +85,14 @@ export interface IActivityData {
   title: string;
   data: number[];
 }
+
+interface ILogDoughnutChart {
+  mail: number;
+  otp: number;
+  request: number;
+}
+
+export interface IDailyLogChart {
+  className?: string;
+  data: ILogDoughnutChart;
+}
