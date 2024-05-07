@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Button, CheckBox } from '.';
+import { Button, CheckBox } from '../forms';
+import { IAuthForm } from '../types/interface';
 
 export default function AuthForm({
   title,
@@ -10,13 +11,7 @@ export default function AuthForm({
   type,
   redirectURL,
   children,
-}: {
-  title: string;
-  desc: string;
-  type: 'login' | 'signup';
-  redirectURL: string;
-  children: any;
-}) {
+}: IAuthForm) {
   // console.log(children);
   interface ILogIn {
     username: string;

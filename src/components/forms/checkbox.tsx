@@ -1,10 +1,6 @@
-export default function CheckBox({
-  name,
-  required = false,
-}: {
-  name: string;
-  required?: boolean;
-}) {
+import { ICheckBox } from '../types/interface';
+
+export default function CheckBox({ name, required = false }: ICheckBox) {
   const identifier = `${name}ID`;
 
   return (

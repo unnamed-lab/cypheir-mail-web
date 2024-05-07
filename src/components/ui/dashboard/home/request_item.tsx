@@ -1,24 +1,16 @@
-import { roundNumApprox } from "@/utils/numerial";
+import { IRequestItem } from '@/components/types/interface';
+import { roundNumApprox } from '@/utils/numerial';
 
-export default function RequestItem({
-  key,
-  title,
-  req,
-  icon,
-}: {
-  key: number;
-  title: string;
-  req: number;
-  icon: any;
-}) {
+export default function RequestItem({ title, req, icon }: IRequestItem) {
   return (
-    <div
-      className="flex md:w-full flex-wrap items-center justify-center gap-1 border-b border-b-zinc-600 p-1"
-      key={key}
-    >
-      <span className="mr-1 md:mr-3 w-full md:w-fit text-center justify-center flex">{icon}</span>{' '}
-      <span className="text-[1.5rem] font-bold md:text-[2.15rem]">{roundNumApprox(req)}</span>{' '}
-      <h2 className="uppercase w-full text-center text-xs font-semibold md:text-xl">
+    <div className="flex flex-wrap items-center justify-center gap-1 border-b border-b-zinc-600 p-1 md:w-full">
+      <span className="mr-1 flex w-full justify-center text-center md:mr-3 md:w-fit">
+        {icon}
+      </span>{' '}
+      <span className="text-[1.5rem] font-bold md:text-[2.15rem]">
+        {roundNumApprox(req)}
+      </span>{' '}
+      <h2 className="w-full text-center text-xs font-semibold uppercase md:text-xl">
         {title}
         {req > 1 && 's'}
       </h2>

@@ -2,13 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-
-interface BlockProps {
-  image: string;
-  title: string;
-  desc: string;
-  backLink: boolean;
-}
+import { BlockProps } from '../types/interface';
 
 export default function Block(props: BlockProps) {
   const { image, desc, title, backLink } = props;

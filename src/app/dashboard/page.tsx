@@ -1,4 +1,9 @@
-import { ActivityLog, HomeRequest } from '@/components/ui/dashboard/home';
+import {
+  ActivityLog,
+  DailyLog,
+  HistoryLog,
+  HomeRequest,
+} from '@/components/ui/dashboard/home';
 import { FaEnvelope, FaKey, FaRobot } from 'react-icons/fa';
 
 export default function Dashboard() {
@@ -28,11 +33,11 @@ export default function Dashboard() {
 
   const activity = [
     {
-      title: 'April',
+      title: 'Request',
       data: [122, 1231, 112, 1312, 444],
     },
     {
-      title: 'May',
+      title: 'OTP',
       data: [322, 131, 912, 2312, 5544],
     },
   ];
@@ -41,9 +46,9 @@ export default function Dashboard() {
     <section className=" w-full">
       <HomeRequest data={requestData} />
       <ActivityLog data={activity} />
-      <div className="flex flex-col md:grid md:grid-cols-2 gap-4 p-3">
-        <div>Hello</div>
-        <div>World</div>
+      <div className="flex flex-col gap-4 p-3 md:grid md:grid-cols-2">
+        <HistoryLog />
+        <DailyLog />
       </div>
     </section>
   );
