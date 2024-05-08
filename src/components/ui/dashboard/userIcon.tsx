@@ -11,7 +11,7 @@ export default function UserIcon({ name, img, url = '/' }: IUserIcon) {
   return (
     <div className="relative flex flex-col">
       <Link href={url}>
-        <div className=" shadow-xs basis bg-secondary hover:bg-primary peer relative mx-auto mb-2 flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-zinc-900 object-cover shadow-zinc-500 transition-all duration-700 ease-in-out hover:rounded-xl md:h-11 md:w-11">
+        <div className=" shadow-xs basis peer relative mx-auto mb-2 flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-zinc-900 bg-secondary object-cover shadow-zinc-500 transition-all duration-700 ease-in-out hover:rounded-xl hover:bg-primary md:h-11 md:w-11">
           {img ? (
             <Image
               className="h-full w-auto"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEventHandler } from 'react';
 import { TKeyBoxType } from './types';
 
 export interface ITableData {
@@ -110,4 +110,13 @@ export interface IKeyContainer {
 
 export interface IHighlightCodeProps {
   children: React.ReactNode | React.ReactNode[];
+}
+
+export interface IFileUpload {
+  label?: string;
+  name: string;
+  accept?: string;
+  required?: boolean;
+  className?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement> | any;
 }
