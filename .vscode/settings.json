@@ -1,5 +1,15 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "editor.codeActionsOnSave": {},
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "autoBarrel.language.defaultLanguage": "TypeScript",
+  "autoBarrel.files.includeExtensionOnExport": ["ts", "tsx", "vue"],
+  "autoBarrel.files.ignoreFilePathPatternOnExport": [
+    "**/*.spec.*",
+    "**/*.test.*"
+  ],
+  "autoBarrel.files.keepExtensionOnExport": false,
+  "autoBarrel.formatting.excludeSemiColonAtEndOfLine": false,
+  "autoBarrel.formatting.useSingleQuotes": true,
+  "autoBarrel.formatting.endOfLine": "lf"
 }

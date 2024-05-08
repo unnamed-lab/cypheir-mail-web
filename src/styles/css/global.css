@@ -37,7 +37,7 @@
     @apply h-auto w-full border-b border-b-4 border-b-secondary;
   }
   .editor-upload {
-    @apply relative flex w-fit cursor-pointer items-center;
+    @apply relative flex w-fit cursor-pointer items-center overflow-hidden;
   }
   .editor-upload input[type='file'] {
     @apply absolute w-full opacity-0;
@@ -46,7 +46,7 @@
     @apply grid h-[2rem] w-[2rem] place-items-center rounded-lg rounded-e-none bg-zinc-950 text-zinc-50 hover:bg-black;
   }
   .editor-upload label {
-    @apply grid h-[2rem] place-items-center rounded-e-lg bg-zinc-300 px-2 py-1 text-xs font-light uppercase;
+    @apply grid h-[2rem] w-[9rem] max-w-[9rem] place-items-center overflow-hidden rounded-e-lg bg-zinc-300 px-2 py-1 text-xs font-light uppercase;
   }
 }
 :root {
