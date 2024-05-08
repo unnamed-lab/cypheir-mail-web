@@ -10,6 +10,7 @@ export default function button({
   submitted,
   processing = 'Submitting',
   hasInput,
+  title,
 }: IButton) {
   return (
     <button
@@ -19,6 +20,7 @@ export default function button({
         `btn disabled:!bg-zinc-600 disabled:!text-zinc-200`,
         className
       )}
+      title={title}
     >
       {submitted ? `${processing}...` : children}
     </button>

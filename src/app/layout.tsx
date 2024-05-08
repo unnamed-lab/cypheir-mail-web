@@ -102,7 +102,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <WebVitals /> */}
+        {process.env.PROJECT_STATUS === 'development' && <WebVitals />}
         {children}
         <Footer />
       </body>

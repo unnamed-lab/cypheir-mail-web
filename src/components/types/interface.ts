@@ -16,6 +16,7 @@ export interface IButton {
   submitted?: boolean;
   processing?: string;
   hasInput?: object;
+  title?: string;
 }
 
 export interface ISideButton {
@@ -119,4 +120,5 @@ export interface IFileUpload {
   required?: boolean;
   className?: string;
   onChange?: ChangeEventHandler<HTMLInputElement> | any;
+  multiple?: boolean;
 }
