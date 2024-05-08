@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode } from 'react';
 import { IHighlightCodeProps } from '../types/interface';
 
-export default function Documentation({ children }: {children: any}) {
+export default function Documentation({ children }: { children: any }) {
   //   console.log(children);
   const keywords = ['function', 'if', 'else', ' while', 'for', 'return'];
 

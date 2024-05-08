@@ -13,10 +13,10 @@ export default function OTPStats({
     <section
       className={twMerge('grid w-full px-3 py-3 md:grid-cols-2', className)}
     >
-      <div className="text-center text-xl md:text-2xl font-semibold my-3">
+      <div className="my-3 text-center text-xl font-semibold md:text-2xl">
         {roundNumApprox(request)} Request{request > 1 ? 's' : ''}
       </div>
-      <div className="text-center text-xl md:text-2xl font-semibold my-3">
+      <div className="my-3 text-center text-xl font-semibold md:text-2xl">
         {roundNumApprox(confirm)} Confirmation{confirm > 1 ? 's' : ''}
       </div>
     </section>

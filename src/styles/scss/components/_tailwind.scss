@@ -12,7 +12,7 @@
   }
 
   .documentation-container {
-    @apply h-auto max-h-[40dvh] w-full overflow-y-scroll p-3 text-sm;
+    @apply h-full w-full overflow-y-scroll p-3 text-sm;
 
     h1 {
       @apply text-2xl font-extrabold;
@@ -39,11 +39,11 @@
     }
 
     code {
-      @apply flex flex-wrap w-full text-sm rounded bg-zinc-200 p-3 font-mono;
+      @apply flex w-full flex-wrap rounded bg-zinc-200 p-3 font-mono text-sm;
     }
 
     img {
-      @apply w-full h-auto border-b border-b-4 border-b-secondary;
+      @apply h-auto w-full border-b border-b-4 border-b-secondary;
     }
   }
 }

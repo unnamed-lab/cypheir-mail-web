@@ -22,15 +22,12 @@ export default function Passcode() {
         name={'otp_secret'}
         inputClass={'w-6/12 md:w-3/12'}
       />
-      <OTPStats
+      {/* <OTPStats
         className="border-b border-b-zinc-200"
         data={{ request: 3000, confirm: 4300 }}
-      />
+      /> */}
       <Documentation>
-        <h1>{`Let's Get Started`}!</h1>
-        <p>
-          <code>{`import {} from "cypheir-mailer"`}</code>
-        </p>
+        <p>Documentation here...</p>
       </Documentation>
     </section>
   );

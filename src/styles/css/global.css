@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +10,7 @@
     @apply mx-1 flex h-10 w-10 grow-0 cursor-pointer items-center justify-center rounded-md border-2 border-zinc-300 bg-zinc-100 p-2 transition-all duration-500 ease-in-out hover:bg-zinc-200;
   }
   .documentation-container {
-    @apply h-auto max-h-[40dvh] w-full overflow-y-scroll p-3 text-sm;
+    @apply h-full w-full overflow-y-scroll p-3 text-sm;
   }
   .documentation-container h1 {
     @apply text-2xl font-extrabold;
@@ -31,10 +31,10 @@
     @apply text-xs font-semibold;
   }
   .documentation-container code {
-    @apply flex flex-wrap w-full text-sm rounded bg-zinc-200 p-3 font-mono;
+    @apply flex w-full flex-wrap rounded bg-zinc-200 p-3 font-mono text-sm;
   }
   .documentation-container img {
-    @apply w-full h-auto border-b border-b-4 border-b-secondary;
+    @apply h-auto w-full border-b border-b-4 border-b-secondary;
   }
 }
 :root {
@@ -48,7 +48,7 @@
   }
 }
 :root * {
-  font-family: "Poppins", "Century Gothic", sans-serif;
+  font-family: 'Poppins', 'Century Gothic', sans-serif;
 }
 :root h1 {
   margin-block-start: var(--heading-space);
@@ -87,7 +87,10 @@
   color: #000;
   background-color: #f8f9fa;
   text-align: center;
-  transition: color 400ms ease, background-color 400ms ease, border-radius 300ms ease;
+  transition:
+    color 400ms ease,
+    background-color 400ms ease,
+    border-radius 300ms ease;
 }
 .btn:hover {
   background-color: #dee2e6;
@@ -104,7 +107,8 @@
   background-color: #1ca7ec;
   color: #fff;
 }
-.btn.primary:hover, .btn.primary:focus {
+.btn.primary:hover,
+.btn.primary:focus {
   outline: 1px solid #1ca7ec;
   background-color: var(--transparent-bg) !important;
   color: #1ca7ec;
@@ -118,7 +122,8 @@
   background-color: #212121;
   color: white;
 }
-.btn.dark:hover, .btn.dark:focus {
+.btn.dark:hover,
+.btn.dark:focus {
   outline: 1px solid #0e0f0f;
   background-color: white;
   color: #0e0f0f;
@@ -189,7 +194,8 @@
 .error .error_container .error_item a {
   color: #1ca7ec;
 }
-.error .error_container .error_item a:hover, .error .error_container .error_item a:focus {
+.error .error_container .error_item a:hover,
+.error .error_container .error_item a:focus {
   color: #88d6fd;
 }
 
