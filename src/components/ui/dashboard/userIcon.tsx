@@ -4,14 +4,14 @@ import Link from 'next/link';
 import ToolTip from '../tooltip';
 import { IUserIcon } from '@/components/types/interface';
 
-export default function UserIcon({ name, img, url = 'dashboard' }: IUserIcon) {
+export default function UserIcon({ name, img, url = '/' }: IUserIcon) {
   const nameArr = name.split(' ');
   const initials = nameArr[0][0].toUpperCase() + nameArr[1][0].toUpperCase();
 
   return (
     <div className="relative flex flex-col">
-      <div className=" shadow-xs basis peer relative mx-auto mb-2 flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-zinc-900 bg-secondary object-cover shadow-zinc-500 transition-all duration-700 ease-in-out hover:rounded-xl hover:bg-primary md:h-11 md:w-11">
-        <Link href={url}>
+      <Link href={url}>
+        <div className=" shadow-xs basis peer relative mx-auto mb-2 flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-zinc-900 bg-secondary object-cover shadow-zinc-500 transition-all duration-700 ease-in-out hover:rounded-xl hover:bg-primary md:h-11 md:w-11">
           {img ? (
             <Image
               className="h-full w-auto"
@@ -26,8 +26,8 @@ export default function UserIcon({ name, img, url = 'dashboard' }: IUserIcon) {
               {initials}
             </span>
           )}
-        </Link>
-      </div>
+        </div>
+      </Link>
       <ToolTip info={name} className="peer-hover:opacity-80" />
       <div className="mb-2 mt-2 h-[1px] w-full bg-zinc-600"></div>
     </div>
