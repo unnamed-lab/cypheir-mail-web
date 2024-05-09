@@ -36,7 +36,7 @@ export default function MailEditor({
         placeholder="Enter your email message right over here :)"
         onChange={handlePreview}
       ></textarea>
-      <div className="mt-2 flex flex-wrap items-center gap-2">
+      <div className="mt-4 flex flex-wrap items-center gap-2">
         <FileUpload
           name="csvUploader"
           label="Upload .CSV file"
