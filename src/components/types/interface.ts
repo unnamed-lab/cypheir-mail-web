@@ -121,4 +121,6 @@ export interface IFileUpload {
   className?: string;
   onChange?: ChangeEventHandler<HTMLInputElement> | any;
   multiple?: boolean;
+  fileOutput?: any;
+  fileLaunch?: boolean;
 }

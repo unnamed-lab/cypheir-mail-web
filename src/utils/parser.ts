@@ -1,50 +1,30 @@
-import fs from 'fs';
-import * as csv from 'csv';
-
-const readCSVFile = async (file: string): Promise<[][]> => {
-  return new Promise((resolve, reject: any) => {
-    const readStream = fs.createReadStream(file, {
-      encoding: 'utf8',
-    }); // Reads local files
-    const csvArr: [][] = [];
-
-    readStream
-      .pipe(
-        csv.parse((err, data) => {
-          if (err) console.error(err);
-          else {
-            const output: [][] = data;
-            return output;
-          }
-        })
-      )
-      .on('data', (data) => {
-        csvArr.push(data);
-      })
-      .on('end', () => resolve(csvArr))
-      .on('error', (error: any) => reject(error));
+const parseCSVText = (file: string): string[][] => {
+  const data = file.split('\n').map((el) => {
+    return el.split(",");
   });
+  return data;
 };
 
-const renderCSV = async (file: string): Promise<[][]> => {
-  try {
-    const csv: [][] = await readCSVFile(file);
-    return csv;
-  } catch (error) {
-    console.error(error);
-    return [[]];
-  }
-};
+const renderCSVFromInput = (
+  csvData: string | ArrayBuffer | null | undefined
+): string[][] | null => {
+  let csvObj;
 
-const renderCSVToObj = async (file: string | [][]) => {
-  //  Start CSV Processing
-  let data: [][];
-  if (typeof file === 'string') {
-    const output = await renderCSV(file);
-    data = output;
+  if (typeof csvData === 'string') csvObj = parseCSVText(csvData);
+  else if (csvData instanceof ArrayBuffer) {
+    const textDecode = new TextDecoder('utf-8');
+    const csvString = textDecode.decode(csvData);
+    csvObj = parseCSVText(csvString);
   } else {
-    data = file;
+    return null;
   }
+  return csvObj
+};
+
+
+const renderCSVToObj = (file: string[][]) => {
+  //  Start CSV Processing
+  let data: string[][] = file;
 
   const itemArr = data;
   const header = itemArr[0]?.map((el: string) => {
@@ -67,4 +47,4 @@ const renderCSVToObj = async (file: string | [][]) => {
   return csvPack;
 };
 
-export { renderCSV, renderCSVToObj };
+export { renderCSVToObj, parseCSVText, renderCSVFromInput };

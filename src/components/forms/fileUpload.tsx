@@ -12,12 +12,15 @@ export default function FileUpload({
   className,
   onChange,
   multiple = false,
+  fileOutput,
+  fileLaunch = false,
 }: IFileUpload) {
   const identifier = `${name}ID`;
   const [fileInput, setFileInput] = useState('');
 
   const handleChange = (e: any) => {
     const file = e.target.files[0];
+    fileOutput(file);
     setFileInput(file.name);
     if (file) onChange(true);
   };

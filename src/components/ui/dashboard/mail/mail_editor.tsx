@@ -7,15 +7,18 @@ export default function MailEditor({
   onWrite,
   setHTMLFormat,
   setFileDetect,
+  setFileData,
 }: {
   title: string;
   onWrite: any;
   setHTMLFormat: any;
   setFileDetect: any;
+  setFileData: any;
 }) {
   const [isHTMLFmt, setHTMLFmt] = useState(false);
 
   const activeFormatBtn = isHTMLFmt ? { backgroundColor: '#88d6fd' } : {};
+
   const handlePreview = (e: any) => {
     onWrite(e.target.value);
   };
@@ -23,6 +26,7 @@ export default function MailEditor({
     setHTMLFormat((prev: boolean) => !prev);
     setHTMLFmt((prev: boolean) => !prev);
   };
+
   return (
     <section className="p-3">
       {title && <h3 className="mb-3 w-full text-xl font-semibold">{title}</h3>}
@@ -42,6 +46,8 @@ export default function MailEditor({
           label="Upload .CSV file"
           accept=".csv"
           onChange={setFileDetect}
+          fileOutput={setFileData}
+          fileLaunch={true}
         />
         <MiniFormBtn
           className={

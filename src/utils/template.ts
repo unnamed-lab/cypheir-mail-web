@@ -14,3 +14,13 @@ export const templateComplier = (obj: any, body: string, subject?: string) => {
 
   return output;
 };
+
+export const generateTags = (content: Record<string, string>) => {
+  const output = [];
+  for (const key in content) {
+    if (Object.prototype.hasOwnProperty.call(content, key)) {
+      output.push({ property: key, value: content[key] });
+    }
+  }
+  return output;
+};
